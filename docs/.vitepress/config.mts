@@ -7,7 +7,10 @@ export default defineConfig({
   description: "永远保持好奇",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [{ text: "主页", link: "/" }],
+    nav: [
+      { text: "主页", link: "/" },
+      { text: "关于", link: "/about" },
+    ],
 
     sidebar: [
       // {
