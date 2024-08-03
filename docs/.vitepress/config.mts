@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/blog/",
   title: "汪志恒的博客",
   description: "永远保持好奇",
   themeConfig: {
@@ -17,7 +18,6 @@ export default defineConfig({
       //   ],
       // },
     ],
-
     socialLinks: [{ icon: "github", link: "https://github.com/ion1ze" }],
   },
 });
