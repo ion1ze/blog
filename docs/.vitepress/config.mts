@@ -1,4 +1,9 @@
 import { defineConfig } from "vitepress";
+import UnoCSS from "unocss/vite";
+
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
+import { VantResolver } from "@vant/auto-import-resolver";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,7 +16,6 @@ export default defineConfig({
       { text: "主页", link: "/" },
       { text: "关于", link: "/about" },
     ],
-
     sidebar: [
       // {
       //   text: "Examples",
@@ -22,5 +26,16 @@ export default defineConfig({
       // },
     ],
     socialLinks: [{ icon: "github", link: "https://github.com/ion1ze" }],
+  },
+  vite: {
+    plugins: [
+      UnoCSS(),
+      AutoImport({
+        resolvers: [VantResolver()],
+      }),
+      Components({
+        resolvers: [VantResolver()],
+      }),
+    ],
   },
 });
