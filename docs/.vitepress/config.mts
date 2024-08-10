@@ -37,5 +37,8 @@ export default defineConfig({
         resolvers: [VantResolver()],
       }),
     ],
+    ssr: {
+      noExternal: ["vant"],
+    },
   },
 });
